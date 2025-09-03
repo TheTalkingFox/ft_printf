@@ -67,19 +67,28 @@ int	ft_printf(const char *input, ...)
 	return (length);
 }
 
+#include "ft_printf.h"
 #include <limits.h>
-#include <stdio.h>
-int	main()
-{
-	
-	int	length_ft;
 
-	//int n  = 22;
-	//char c = 'a';
-	//int n = NULL;
- 	int	length_or;
- 	length_or = printf ("%c", '0'); 
-	printf("\n%d\n", length_or);
-	length_ft = ft_printf("%c", '0');
-	printf("\n%d", length_ft);
+int main(void)
+{
+    char c = 'A';
+    char *s = "Hello, ft_printf!";
+    void *p = s;
+    int d = -12345;
+    int i = 67890;
+    unsigned int u = 4294967295U; // UINT_MAX
+    int hex = 48879; // 0xBEEF
+
+    ft_printf("%%c: %c\n", c);
+    ft_printf("%%s: %s\n", s);
+    ft_printf("%%p: %p\n", p);
+    ft_printf("%%d: %d\n", d);
+    ft_printf("%%i: %i\n", i);
+    ft_printf("%%u: %u\n", u);
+    ft_printf("%%x: %x\n", hex);
+    ft_printf("%%X: %X\n", hex);
+    ft_printf("%%%%: %%\n");
+
+    return 0;
 }

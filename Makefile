@@ -1,4 +1,4 @@
-NAME = libftprintf.a
+NAME = ft_printf
 
 CC = cc
 
@@ -11,7 +11,7 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $^
+	$(CC) $(CFLAGS) -o $(NAME) $^
 
 clean:
 	rm -f $(OBJ) $(OBJB)
